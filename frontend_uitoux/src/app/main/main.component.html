@@ -1,0 +1,353 @@
+<section>
+  <div class="gallery">
+    <div class="border">
+      <img src="/assets/source-images/brand-1.png" />
+      <p>AIMPARTS</p>
+    </div>
+    <div class="border">
+      <img src="/assets/source-images/brand-2.png" />
+      <p>WINDENGIINE</p>
+    </div>
+    <div class="border">
+      <img src="/assets/source-images/brand-3.png" />
+      <p>TURBOELECTRIC</p>
+    </div>
+    <div class="border">
+      <img src="/assets/source-images/brand-4.png" />
+      <p>STARTONE</p>
+    </div>
+    <div class="border">
+      <img src="/assets/source-images/brand-5.png" />
+      <p>BRANDIX</p>
+    </div>
+    <div class="border">
+      <img src="/assets/source-images/brand-6.png" />
+      <p>ABS-BRAND</p>
+    </div>
+    <div class="border">
+      <img src="/assets/source-images/brand-7.png" />
+      <p>GREATCIRCLE</p>
+    </div>
+    <div class="border">
+      <img src="/assets/source-images/brand-8.png" />
+      <p>JUSTROMB</p>
+    </div>
+  </div>
+  <div class="gallery">
+    <div class="border">
+      <img src="/assets/source-images/brand-9.png" />
+      <p>FASTWHEELS</p>
+    </div>
+    <div class="border">
+      <img src="/assets/source-images/brand-10.png" />
+      <p>STROYKA-X</p>
+    </div>
+    <div class="border">
+      <img src="/assets/source-images/brand-11.png" />
+      <p>MISSION-51</p>
+    </div>
+    <div class="border">
+      <img src="/assets/source-images/brand-12.png" />
+      <p>FUELCORP</p>
+    </div>
+    <div class="border">
+      <img src="/assets/source-images/brand-13.png" />
+      <p>REDGATE</p>
+    </div>
+    <div class="border">
+      <img src="/assets/source-images/brand-14.png" />
+      <p>BLOCKS</p>
+    </div>
+    <div class="border">
+      <img src="/assets/source-images/brand-15.png" />
+      <p>BLACKBOX</p>
+    </div>
+    <div class="border">
+      <img src="/assets/source-images/brand-16.png" />
+      <p>SQUAREGARAGE</p>
+    </div>
+  </div>
+</section>
+
+<section class="featured_products mt-5">
+  <div class="row">
+    <div class="col-6">
+      <h4>Featured Products</h4>
+    </div>
+    <div class="col-6">
+      <ul class="d-flex justify-content-between align-items-center">
+        <li   [class.active]="showAllFeatures" (click)="getAllFeatures()" >All</li>
+
+        <li  [class.active]="selectedItemId === item._id"  *ngFor="let item of data?.response" (click)="getoneProduct(item._id)"  >{{ item.title }}</li>
+
+      </ul>
+    </div>
+  </div>
+  <div class="divider"  ></div>
+
+  <div class="cards-wrapper mt-5" *ngIf="showAllFeatures"  >
+    <div class="card"  *ngFor="let item of allFeatures?.response"   >
+      <img
+        [src]="item.imageUrl"
+        class="card-img-top img-fluid"
+        alt="..."
+      />
+      <div class="card-body">
+        <span> {{ item.productNumber }} </span>
+        <h6 class="card-title">{{item.name }}</h6>
+        <div class="d-flex justify-content-between align-items-center" >
+          <div > <b>  ${{item.discountPrice }} </b>  <s> ${{item.price }} </s> </div>
+          <div ></div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div class="cards-wrapper mt-5"  *ngIf="!showAllFeatures"     >
+    <div class="card"  *ngFor="let item of getOneFeature"   >
+      <img
+        [src]="item.imageUrl"
+        class="card-img-top img-fluid"
+        alt="..."
+      />
+      <div class="card-body">
+        <span> {{ item.productNumber }} </span>
+        <h6 class="card-title">{{item.name }}</h6>
+        <div class="d-flex justify-content-between align-items-center" >
+          <div > <b>  ${{item.discountPrice }} </b>  <s> ${{item.price }} </s> </div>
+          <div ></div>
+        </div>
+      </div>
+    </div>
+    </div>
+</section>
+
+<section class="ads mt-5">
+  <div class="row">
+    <div class="col-6">
+      <div class="image-container">
+        <img src="/assets/source-images/banner1.jpeg" class="img-fluid" />
+        <div class="content overlay_2">
+          <div>
+            <h2>MOTOR OIL</h2>
+            <p>Synthetic motor oil with free shipping</p>
+            <button class="btn btn-sm">Shop Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="image-container">
+        <img src="/assets/source-images/banner2.jpeg" class="img-fluid" />
+        <div class="content overlay_2">
+          <div>
+            <h2 class="bg p-1">SAVE UP TO $40</h2>
+            <p>Oil</p>
+            <button class="btn btn-sm">Shop Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mt-5 sml-cards">
+  <div class="row gx-3">
+    <div class="col-md-4">
+      <h5>Top Rated Products</h5>
+      <div class="divider"></div>
+      <div class="card"  *ngFor="let item of TopRatedproduct?.response" >
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              [src]="item.imageUrl"
+              class="img-fluid mx-auto d-block"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-8 my-auto">
+            <div class="card-body">
+              <h6 class="card-title">{{ item.name }}</h6>
+              <div class="card-text">
+                <div class="d-flex">
+                  <div class="rating">
+                    <span
+                      *ngFor="let _ of [].constructor(fullStars); let i = index"
+                      ><fa-icon [icon]="faStar"></fa-icon
+                    ></span>
+                    <span *ngIf="halfStar"
+                      ><fa-icon [icon]="faStarHalf"></fa-icon
+                    ></span>
+                    <span
+                      *ngFor="
+                        let _ of [].constructor(
+                          totalStars - fullStars - (halfStar ? 1 : 0)
+                        );
+                        let i = index
+                      "
+                      class="fa fa-star-o"
+                    ></span>
+                  </div>
+                  <p>17 reviews</p>
+                </div>
+                <strong> <b> ${{ item.discountPrice }} </b> <s> ${{ item.price }}</s> </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="col-md-4">
+      <h5   >Special Offers</h5>
+      <div class="divider"></div>
+      <div class="card"  *ngFor="let item of specialProduct" >
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              [src]="item.imageUrl"
+              class="img-fluid mx-auto d-block"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-8 my-auto">
+            <div class="card-body">
+              <h6 class="card-title">{{ item.name }}</h6>
+              <div class="card-text">
+                <div class="d-flex">
+                  <div class="rating">
+                    <span
+                      *ngFor="let _ of [].constructor(fullStars); let i = index"
+                      ><fa-icon [icon]="faStar"></fa-icon
+                    ></span>
+                    <span *ngIf="halfStar"
+                      ><fa-icon [icon]="faStarHalf"></fa-icon
+                    ></span>
+                    <span
+                      *ngFor="
+                        let _ of [].constructor(
+                          totalStars - fullStars - (halfStar ? 1 : 0)
+                        );
+                        let i = index
+                      "
+                      class="fa fa-star-o"
+                    ></span>
+                  </div>
+                  <p>17 reviews</p>
+                </div>
+                <strong> <b> ${{ item.discountPrice }} </b> <s> ${{ item.price }}</s> </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="col-md-4">
+      <h5  >Bestsellers</h5>
+      <div class="divider"></div>
+      <div class="card"  *ngFor="let item of BestProduct?.response" >
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              [src]="item.imageUrl"
+              class="img-fluid mx-auto d-block"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-8 my-auto">
+            <div class="card-body">
+              <h6 class="card-title">{{ item.name }}</h6>
+              <div class="card-text">
+                <div class="d-flex">
+                  <div class="rating">
+                    <span
+                      *ngFor="let _ of [].constructor(fullStars); let i = index"
+                      ><fa-icon [icon]="faStar"></fa-icon
+                    ></span>
+                    <span *ngIf="halfStar"
+                      ><fa-icon [icon]="faStarHalf"></fa-icon
+                    ></span>
+                    <span
+                      *ngFor="
+                        let _ of [].constructor(
+                          totalStars - fullStars - (halfStar ? 1 : 0)
+                        );
+                        let i = index
+                      "
+                      class="fa fa-star-o"
+                    ></span>
+                  </div>
+                  <p>17 reviews</p>
+                </div>
+                <strong> <b> ${{ item.discountPrice }} </b> <s> ${{ item.price }}</s> </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="footerbar">
+  <div class="divider my-4"></div>
+  <div class="row">
+    <div class="col-3">
+      <div class="d-flex align-items-center justify-content-center">
+        <img
+          src="/assets/source-images/svg/free-delivery.svg"
+          class="img-fluid p-2 me-2"
+        />
+        <div class="ico-content">
+          <h5 class="fw-bold m-0">Free Shipping</h5>
+          <p class="m-0">For orders from $50</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="d-flex align-items-center justify-content-center">
+        <img
+          src="/assets/source-images/svg/24-hours.svg"
+          class="img-fluid p-2 me-2"
+        />
+        <div class="ico-content">
+          <h5 class="fw-bold m-0">Support 24/7</h5>
+          <p class="m-0">Call us anytime</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="d-flex align-items-center justify-content-center">
+        <img
+          src="/assets/source-images/svg/payment-security.svg"
+          class="img-fluid p-2 me-2"
+        />
+        <div class="ico-content">
+          <h5 class="fw-bold m-0">100% Safety</h5>
+          <p class="m-0">Only secure payments</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="d-flex align-items-center justify-content-center">
+        <img
+          src="/assets/source-images/svg/tag.svg"
+          class="img-fluid p-2 me-2"
+        />
+        <div class="ico-content">
+          <h5 class="fw-bold m-0">Hot Offers</h5>
+          <p class="m-0">Discount up to 90%</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

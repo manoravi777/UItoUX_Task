@@ -1,0 +1,78 @@
+.car select {
+  border: none;
+  border-radius: 0;
+  background-color: #ffe900;
+  height: auto;
+}
+.search {
+  border-radius: 0;
+  border-right: none;
+  background: #eeec;
+}
+
+.input-group-text {
+  border-radius: 0px;
+  border-left: none;
+  background: #eeec;
+}
+.input-group-text .ng-fa-icon {
+  color: rgba(171, 171, 171, 0.8);
+}
+.car {
+  width: 35%;
+}
+.car .input-group-text {
+  border-radius: 0px;
+  border: none;
+  background: #ffe900;
+}
+.car .input-group-text .ng-fa-icon {
+  color: rgba(0, 0, 0, 0.8);
+}
+.profile .label,
+.cart .label {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(138, 138, 138, 0.8);
+}
+.profile .name,
+.cart .value {
+  font-weight: 600;
+}
+.profile img {
+  margin-right: 10px !important;
+}
+.cart img {
+  margin-right: 10px !important;
+}
+
+.wish,
+.cart-ico {
+  position: relative;
+}
+.icon-button__badge {
+  position: absolute;
+  top: -7px;
+  left: 60%;
+  width: 15px;
+  height: 15px;
+  font-size: 10px;
+  background: #00e48c;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 35%;
+  border-bottom-right-radius: 35%;
+}
+select.category {
+  border: none !important;
+}
+.call {
+  padding: 0.5rem 0rem;
+  color: rgba(138, 138, 138, 0.8);
+}
+.call span {
+  color: #000;
+  font-weight: 600;
+}

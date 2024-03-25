@@ -1,0 +1,56 @@
+footer {
+  padding: 2%;
+  background-color: rgb(66, 66, 66);
+  color: #fff;
+  margin-top: 15px;
+}
+
+footer p {
+  color: #b3b3b3;
+  margin: 0;
+  font-size: 13px;
+}
+
+.wht {
+  color: #fff !important;
+  margin-bottom: 15px !important;
+  font-weight: 600;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+.list li {
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #b3b3b3;
+}
+address {
+  font-size: 13px;
+}
+.emailinput {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.emailinput input {
+  border: none;
+  border-radius: 0px;
+  background: #787878;
+}
+.emailinput .btn {
+  background-color: #00e48c;
+  border-radius: 0px;
+  margin-left: 10px;
+  color: #fff;
+}
+.bg-footer {
+  background-color: #363636;
+}
+.bg-footer p span {
+  color: #9e9e9e;
+}
+.bg-footer p {
+  color: #fff;
+  font-size: 13px;
+}

@@ -1,0 +1,33 @@
+.carousel-item {
+  position: relative;
+}
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: -webkit-fill-available;
+  padding: 5%;
+}
+.content .f-bg {
+  font-weight: bold;
+  padding: 1%;
+  width: max-content;
+  background: #ffe900;
+}
+.content .detail {
+  font-weight: bold;
+}
+
+.content p {
+  color: rgba(171, 171, 171, 0.8);
+}
+.content .btn {
+  margin: 10px auto;
+  background-color: #00e48c;
+  border-radius: 0;
+  color: #fff;
+}
